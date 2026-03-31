@@ -1,18 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
+  const { scrollY } = useScroll();
+const y = useTransform(scrollY, [0, 500], [0, -120]);
+
   return (
     <section className="relative h-screen flex items-center justify-center text-white">
 
       {/* Background */}
       <div className="absolute inset-0">
-        <img
-          src="/artist2.jpg"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/70" />
+        <motion.img
+  src="/artist2.jpg"
+  className="w-full h-full object-cover"
+  style={{ y }}
+  initial={{ scale: 1.1 }}
+  animate={{ scale: 1 }}
+  transition={{ duration: 6 }}
+/>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
       </div>
 
       {/* Content */}

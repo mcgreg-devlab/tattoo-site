@@ -78,3 +78,8 @@ a:hover {
 img {
   transition: transform 0.5s ease;
 }
+
+body {
+  background: radial-gradient(circle at top, #111 0%, #000 60%);
+  color: white;
+}

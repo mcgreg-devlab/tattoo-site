@@ -48,27 +48,6 @@ export default function Home() {
             height={200}
             className="h-40 w-full object-cover"
           />
-          <Image
-            src="/tattoo2.jpg"
-            alt="tattoo"
-            width={400}
-            height={200}
-            className="h-40 w-full object-cover"
-          />
-          <Image
-            src="/tattoo3.jpg"
-            alt="tattoo"
-            width={400}
-            height={200}
-            className="h-40 w-full object-cover"
-          />
-          <Image
-            src="/tattoo4.jpg"
-            alt="tattoo"
-            width={400}
-            height={200}
-            className="h-40 w-full object-cover"
-          />
         </div>
       </section>
 

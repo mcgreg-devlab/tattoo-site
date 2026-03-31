@@ -32,3 +32,49 @@ h1, h2, h3 {
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: #0a0a0a;
+  color: white;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+:root {
+  --gold: #d4af37;
+  --gold-soft: #f5d76e;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+/* Gold text accent */
+.gold-text {
+  color: var(--gold);
+}
+
+/* Glow effect */
+.glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Smooth image feel */
+img {
+  transition: transform 0.5s ease;
+}

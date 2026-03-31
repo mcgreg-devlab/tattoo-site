@@ -10,11 +10,11 @@ export default function ArtistsSection() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="py-24 px-6 max-w-7xl mx-auto"
+      className="py-32 px-6 max-w-7xl mx-auto"
     >
-      <h2 className="text-4xl font-bold mb-12 text-center">
-        OUR ARTISTS
-      </h2>
+      <h2 className="text-4xl font-bold mb-12 text-center tracking-widest gold-text">
+  OUR ARTISTS
+</h2>
 
       <div className="grid md:grid-cols-3 gap-10">
         <ArtistCard

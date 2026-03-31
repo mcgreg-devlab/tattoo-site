@@ -16,22 +16,25 @@ export default function Home() {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
-          <ArtistCard
-            name="Artist One"
-            style="Realism"
-            image="/artist1.jpg"
-          />
-          <ArtistCard
-            name="Artist Two"
-            style="Blackwork"
-            image="/artist2.jpg"
-          />
-          <ArtistCard
-            name="Artist Three"
-            style="Minimalist"
-            image="/artist3.jpg"
-          />
-        </div>
+  <ArtistCard
+    name="Artist One"
+    style="Realism"
+    image="/artist1.jpg"
+    slug="artist-one"
+  />
+  <ArtistCard
+    name="Artist Two"
+    style="Blackwork"
+    image="/artist2.jpg"
+    slug="artist-two"
+  />
+  <ArtistCard
+    name="Artist Three"
+    style="Minimalist"
+    image="/artist3.jpg"
+    slug="artist-three"
+  />
+</div>
       </section>
 
       {/* Gallery (SAFE — only 1 image that exists) */}

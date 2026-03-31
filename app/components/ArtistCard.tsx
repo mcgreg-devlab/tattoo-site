@@ -6,23 +6,22 @@ type Props = {
   name: string;
   style: string;
   image: string;
+  slug: string;
 };
 
-export default function ArtistCard({ name, style, image }: Props) {
-  const slug = name.toLowerCase().replace(/\s+/g, "-");
-
+export default function ArtistCard({ name, style, image, slug }: Props) {
   return (
     <Link href={`/artists/${slug}`}>
-      <div className="relative overflow-hidden cursor-pointer group">
+      <div className="cursor-pointer">
         <img
           src={image}
           alt={name}
-          className="w-full h-80 object-cover transition duration-300 group-hover:scale-105"
+          className="w-full h-80 object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/60 flex flex-col justify-end p-4">
+        <div className="mt-2">
           <h3 className="text-xl font-bold">{name}</h3>
-          <p className="text-gray-300">{style}</p>
+          <p className="text-gray-400">{style}</p>
         </div>
       </div>
     </Link>

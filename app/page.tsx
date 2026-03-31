@@ -1,6 +1,9 @@
+"use client";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ArtistCard from "./components/ArtistCard";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -8,7 +11,7 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      {/* Artists Section (UPGRADED) */}
+      {/* Artists Section */}
       <section className="p-10 bg-black">
         <h2 className="text-3xl font-bold mb-8 text-center">
           Meet Our Artists
@@ -37,10 +40,10 @@ export default function Home() {
       <section className="p-10 bg-gray-950">
         <h2 className="text-3xl font-bold mb-6">Latest Work</h2>
         <div className="grid md:grid-cols-4 gap-4">
-          <img src="/tattoo1.jpg" className="h-40 w-full object-cover" />
-          <img src="/tattoo2.jpg" className="h-40 w-full object-cover" />
-          <img src="/tattoo3.jpg" className="h-40 w-full object-cover" />
-          <img src="/tattoo4.jpg" className="h-40 w-full object-cover" />
+          <Image src="/tattoo1.jpg" alt="tattoo" width={400} height={200} className="h-40 w-full object-cover" />
+          <Image src="/tattoo2.jpg" alt="tattoo" width={400} height={200} className="h-40 w-full object-cover" />
+          <Image src="/tattoo3.jpg" alt="tattoo" width={400} height={200} className="h-40 w-full object-cover" />
+          <Image src="/tattoo4.jpg" alt="tattoo" width={400} height={200} className="h-40 w-full object-cover" />
         </div>
       </section>
 

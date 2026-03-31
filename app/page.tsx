@@ -39,20 +39,48 @@ export default function Home() {
       {/* Gallery Preview */}
       <section className="p-10 bg-gray-950">
         <h2 className="text-3xl font-bold mb-6">Latest Work</h2>
+
         <div className="grid md:grid-cols-4 gap-4">
-          <Image src="/tattoo1.jpg" alt="tattoo" width={400} height={200} className="h-40 w-full object-cover" />
-          <Image src="/tattoo2.jpg" alt="tattoo" width={400} height={200} className="h-40 w-full object-cover" />
-          <Image src="/tattoo3.jpg" alt="tattoo" width={400} height={200} className="h-40 w-full object-cover" />
-          <Image src="/tattoo4.jpg" alt="tattoo" width={400} height={200} className="h-40 w-full object-cover" />
+          <Image
+            src="/tattoo1.jpg"
+            alt="tattoo"
+            width={400}
+            height={200}
+            className="h-40 w-full object-cover"
+          />
+          <Image
+            src="/tattoo2.jpg"
+            alt="tattoo"
+            width={400}
+            height={200}
+            className="h-40 w-full object-cover"
+          />
+          <Image
+            src="/tattoo3.jpg"
+            alt="tattoo"
+            width={400}
+            height={200}
+            className="h-40 w-full object-cover"
+          />
+          <Image
+            src="/tattoo4.jpg"
+            alt="tattoo"
+            width={400}
+            height={200}
+            className="h-40 w-full object-cover"
+          />
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="p-16 text-center">
-        <h2 className="text-4xl font-bold">Ready for Your Next Tattoo?</h2>
+        <h2 className="text-4xl font-bold">
+          Ready for Your Next Tattoo?
+        </h2>
         <p className="text-gray-400 mt-4">
           Book an appointment with our professional artists today.
         </p>
+
         <a
           href="/contact"
           className="inline-block mt-6 bg-white text-black px-8 py-3 font-semibold"

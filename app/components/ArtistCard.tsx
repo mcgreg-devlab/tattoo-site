@@ -17,11 +17,11 @@ export default function ArtistCard({ name, style, image, slug }: Props) {
         whileHover={{ scale: 1.03 }}
         className="group cursor-pointer transition"
       >
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden cursor-pointer group">
           <img
-            src={image}
-            className="w-full h-[400px] object-cover transition duration-500 group-hover:scale-110"
-          />
+  src={image}
+  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+/>
 
           {/* Overlay */}
           <div className="absolute inset-0 border border-transparent group-hover:border-[color:var(--gold)] transition duration-500" />

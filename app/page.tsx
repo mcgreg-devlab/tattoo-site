@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ArtistsSection from "./components/ArtistsSection";
 import { ParallaxSection } from "./components/ParallaxSection";
+import GalleryCarousel from "./components/GalleryCarousel";
 
 export default function Home() {
   return (
@@ -22,6 +23,17 @@ export default function Home() {
 </section>
 
       <ArtistsSection />
+     {/* Gallery Section */}
+<section className="py-32 px-6 max-w-7xl mx-auto">
+  <h2 className="text-3xl font-semibold text-center mb-16">
+    Latest Work
+  </h2>
+
+  <GalleryCarousel />
+</section>
+
+<div className="h-32 bg-gradient-to-b from-black to-gray-950" />
+
       {/* Services Section */}
 <section className="py-24 px-6 max-w-6xl mx-auto">
   <h2 className="text-3xl font-semibold text-center mb-16">

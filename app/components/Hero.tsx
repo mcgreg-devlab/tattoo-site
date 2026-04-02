@@ -12,7 +12,7 @@ const y = useTransform(scrollY, [0, 500], [0, -120]);
       {/* Background */}
       <div className="absolute inset-0">
         <motion.img
-  src="/artist2.jpg"
+  src="/hero.jpg"
   className="w-full h-full object-cover"
   style={{ y }}
   initial={{ scale: 1.1 }}

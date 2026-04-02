@@ -7,7 +7,7 @@ type Props = {
   name: string;
   style: string;
   image: string;
-  onBook: (artistName: string) => void; // ✅ NEW
+  onBook: (artistName: string) => void;
 };
 
 export default function ArtistCard({ name, style, image, onBook }: Props) {
@@ -29,7 +29,7 @@ export default function ArtistCard({ name, style, image, onBook }: Props) {
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition duration-500" />
 
-      {/* GLOW */}
+      {/* GLOW EFFECT */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15),transparent_70%)]" />
 
       {/* CONTENT */}
@@ -51,7 +51,7 @@ export default function ArtistCard({ name, style, image, onBook }: Props) {
           <Heart size={18} />
         </div>
 
-        {/* ✅ BUTTON → MODAL TRIGGER */}
+        {/* ✅ BUTTON → MODAL */}
         <button
           onClick={() => onBook(name)}
           className="border border-red-500 bg-red-600/80 px-6 py-2 text-sm tracking-widest hover:bg-red-600 transition"

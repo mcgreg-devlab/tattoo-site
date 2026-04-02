@@ -61,48 +61,107 @@ export default function Home() {
 
 </section>
 
-     {/* Gallery Section */}
-<section className="py-32 px-6 max-w-7xl mx-auto">
-  <h2 className="text-3xl font-semibold text-center mb-16">
-    Ink Gallery
-  </h2>
-
-  <GalleryCarousel />
-</section>
-
-<div className="h-32 bg-gradient-to-b from-black to-gray-950" />
-
       {/* Services Section */}
-<section className="py-24 px-6 max-w-6xl mx-auto">
-  <h2 className="text-3xl font-semibold text-center mb-16">
-    Our Expertise
-  </h2>
+<section className="relative py-32 px-6 overflow-hidden">
 
-  <div className="grid md:grid-cols-3 gap-10 text-center">
-    
-    <div>
-      <h3 className="text-xl font-bold mb-3">Custom Tattoos</h3>
-      <p className="text-gray-400">
-        Fully personalized designs crafted to match your vision.
+  {/* 🔥 BACKGROUND GRADIENT */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black" />
+
+  {/* ✨ SUBTLE GLOW */}
+  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]" />
+
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-6xl mx-auto">
+
+    {/* 🔥 TITLE */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-20"
+    >
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-wide mb-4">
+        Our Expertise
+      </h2>
+      <p className="text-gray-400 max-w-xl mx-auto">
+        Precision. Creativity. Mastery. Explore the styles we specialize in.
       </p>
-    </div>
+    </motion.div>
 
-    <div>
-      <h3 className="text-xl font-bold mb-3">Black & Grey</h3>
-      <p className="text-gray-400">
-        Timeless shading and realism with deep contrast.
-      </p>
-    </div>
+    {/* 🔥 CARDS */}
+    <div className="grid md:grid-cols-3 gap-10">
 
-    <div>
-      <h3 className="text-xl font-bold mb-3">Fine Line</h3>
-      <p className="text-gray-400">
-        Clean, minimal, and precise modern tattoo styles.
-      </p>
-    </div>
+      {[
+        {
+          title: "Custom Tattoos",
+          desc: "Fully personalized designs crafted to match your vision.",
+        },
+        {
+          title: "Black & Grey",
+          desc: "Timeless shading and realism with deep contrast.",
+        },
+        {
+          title: "Fine Line",
+          desc: "Clean, minimal, and precise modern tattoo styles.",
+        },
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: i * 0.2 }}
+          viewport={{ once: true }}
+          className="group relative p-8 border border-white/10 hover:border-white/30 transition duration-500 rounded-2xl backdrop-blur-sm bg-white/5 hover:bg-white/10"
+        >
 
+          {/* ✨ HOVER GLOW */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15),transparent_70%)] rounded-2xl" />
+
+          <h3 className="text-xl font-semibold mb-4 tracking-wide">
+            {item.title}
+          </h3>
+
+          <p className="text-gray-400 leading-relaxed">
+            {item.desc}
+          </p>
+
+        </motion.div>
+      ))}
+
+    </div>
   </div>
 </section>
+
+{/* Gallery Section */}
+<section className="relative py-32 px-6 overflow-hidden">
+
+  {/* 🔥 GRADIENT BACKGROUND */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black" />
+
+  {/* ✨ CENTER GLOW */}
+  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]" />
+
+  {/* 🎨 TEXTURE OVERLAY */}
+  <div className="absolute inset-0 bg-[url('/texture.jpg')] opacity-10" />
+
+  {/* ✅ CONTENT WRAPPER */}
+  <div className="relative z-10 max-w-7xl mx-auto">
+
+    {/* TITLE */}
+    <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16 tracking-wide">
+      Ink Gallery
+    </h2>
+
+    {/* GALLERY */}
+    <GalleryCarousel />
+
+  </div>
+
+</section>
+
+{/* 🔥 SECTION DIVIDER */}
+<div className="h-32 bg-gradient-to-b from-black to-gray-950" />
 
       <ParallaxSection />
       {/* CTA Section */}

@@ -7,35 +7,62 @@ export default function GalleryCarousel() {
     "/tattoo1.jpg",
     "/tattoo2.jpg",
     "/tattoo3.jpg",
-    "/tattoo1.jpg",
-    "/tattoo2.jpg",
-    "/tattoo3.jpg",
+    "/tattoo4.jpg",
+    "/tattoo5.jpg",
+    "/tattoo6.jpg",
+    "/tattoo7.jpg",
+    "/tattoo8.jpg",
   ];
+
+  const loopImages = [...images, ...images];
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="overflow-hidden py-10 carousel group">
+    <div className="py-10">
 
-      <div className="flex gap-6 animate-scroll scroll-track group-hover:[animation-play-state:paused]">
-        {images.map((src, i) => (
-          <div key={i} className="min-w-[300px]">
-            <div className="relative overflow-hidden group">
+      {/* 🔥 SCROLL CONTAINER */}
+      <div className="overflow-hidden">
 
-              <img
-                src={src}
-                onClick={() => setSelectedImage(src)}
-                className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
-              />
+        <div
+          className="
+            group
+            flex gap-6
+            animate-scroll
+            hover:[animation-play-state:paused]
+            active:[animation-play-state:paused]
+            overflow-x-auto
+            scroll-smooth
+            no-scrollbar
+            touch-pan-x
+            px-4
+            cursor-grab active:cursor-grabbing
+          "
+        >
+          {loopImages.map((src, i) => (
+            <div key={i} className="min-w-[300px] flex-shrink-0">
+              
+              <div className="relative overflow-hidden group cursor-pointer">
 
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
+                {/* IMAGE */}
+                <img
+                  src={src}
+                  onClick={() => setSelectedImage(src)}
+                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
+
+              </div>
 
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
       </div>
 
-      {/* FULLSCREEN MODAL */}
+      {/* 🔥 FULLSCREEN MODAL */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"

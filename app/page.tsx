@@ -14,6 +14,7 @@ export default function Home() {
       <Hero />
       <StyleSection />
       <WhySection />
+      <ArtistsSection /> 
 
       {/* About Section */}
 <section className="py-24 px-6 max-w-5xl mx-auto text-center">
@@ -32,7 +33,7 @@ export default function Home() {
      {/* Gallery Section */}
 <section className="py-32 px-6 max-w-7xl mx-auto">
   <h2 className="text-3xl font-semibold text-center mb-16">
-    Latest Work
+    Ink Gallery
   </h2>
 
   <GalleryCarousel />

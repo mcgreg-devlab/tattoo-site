@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Instagram, Heart } from "lucide-react";
+import { Camera, Heart } from "lucide-react";
 
 type Props = {
   name: string;
@@ -47,7 +47,7 @@ export default function ArtistCard({ name, style, image, onBook }: Props) {
 
         {/* ICONS */}
         <div className="flex gap-4 mb-6 opacity-80 group-hover:opacity-100 transition">
-          <Instagram size={18} />
+          <Camera size={18} />
           <Heart size={18} />
         </div>
 

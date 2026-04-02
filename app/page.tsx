@@ -1,14 +1,20 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import StyleSection from "./components/StyleSection";
+import WhySection from "./components/WhySection";
 import ArtistsSection from "./components/ArtistsSection";
 import { ParallaxSection } from "./components/ParallaxSection";
 import GalleryCarousel from "./components/GalleryCarousel";
+
 
 export default function Home() {
   return (
     <main className="bg-black text-white">
       <Navbar />
       <Hero />
+      <StyleSection />
+      <WhySection />
+
       {/* About Section */}
 <section className="py-24 px-6 max-w-5xl mx-auto text-center">
   <h2 className="text-3xl md:text-4xl font-semibold tracking-wide mb-6">

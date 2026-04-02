@@ -29,7 +29,6 @@ export default function Home() {
   </p>
 </section>
 
-      <ArtistsSection />
      {/* Gallery Section */}
 <section className="py-32 px-6 max-w-7xl mx-auto">
   <h2 className="text-3xl font-semibold text-center mb-16">

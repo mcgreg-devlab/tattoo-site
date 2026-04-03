@@ -13,17 +13,14 @@ export default function WhySection() {
   return (
     <section className="relative py-32 px-6 text-white overflow-hidden">
 
-      {/* TEXTURE BACKGROUND */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/texture.jpg')",
-          opacity: 0.7,
-        }}
-      />
+      {/* 🔥 BASE GRADIENT */}
+<div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black" />
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/30" />
+{/* 🎨 TEXTURE (VISIBLE + BLENDED) */}
+<div className="absolute inset-0 bg-[url('/texture.jpg')] opacity-20" />
+
+{/* ✨ SUBTLE GLOW */}
+<div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]" />
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto text-center">

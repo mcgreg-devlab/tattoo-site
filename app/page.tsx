@@ -173,22 +173,58 @@ export default function Home() {
 
 
       <ParallaxSection />
-      {/* CTA Section */}
-<section className="py-32 text-center">
-  <h2 className="text-4xl font-bold mb-6">
-    Book Your Session
-  </h2>
+<section className="relative py-32 px-6 text-center overflow-hidden">
 
-  <p className="text-gray-400 mb-8">
-    Work with elite artists and bring your vision to life.
-  </p>
+  {/* 🔥 BASE GRADIENT */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black" />
 
-  <a
-    href="/contact"
-    className="inline-block border border-white px-10 py-4 tracking-wide hover:bg-white hover:text-black transition-all duration-300"
-  >
-    Start Your Journey
-  </a>
+  {/* 🎨 TEXTURE (same as other sections) */}
+  <div className="absolute inset-0 bg-[url('/texture.jpg')] opacity-20" />
+
+  {/* ✨ SUBTLE GLOW */}
+  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]" />
+
+  {/* 🔥 TOP BLEND (from parallax) */}
+  <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10" />
+
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-3xl mx-auto">
+
+    {/* 🔥 ANIMATED TITLE */}
+    <motion.h2
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-4xl md:text-5xl font-bold tracking-wide mb-6"
+    >
+      BOOK YOUR SESSION
+    </motion.h2>
+
+    {/* 🔥 ANIMATED TEXT */}
+    <motion.p
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      viewport={{ once: true }}
+      className="text-gray-400 mb-10 text-lg leading-relaxed"
+    >
+      Turn your idea into a masterpiece with our world-class tattoo artists.
+    </motion.p>
+
+    {/* 🔥 ANIMATED BUTTON */}
+    <motion.a
+      href="/contact"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      viewport={{ once: true }}
+      className="inline-block border border-white px-10 py-4 tracking-widest text-sm hover:bg-white hover:text-black transition duration-300"
+    >
+      START YOUR JOURNEY →
+    </motion.a>
+
+  </div>
 </section>
 
       <footer className="pt-10 pb-10 text-center text-gray-500 text-sm border-t border-gray-800">

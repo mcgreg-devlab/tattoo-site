@@ -32,18 +32,16 @@ export default function ArtistsSection() {
         >
           <div className="h-px w-16 bg-white/20" />
           <h2 className="text-3xl md:text-4xl font-semibold tracking-[0.3em]">
-            MEET THE ARTISTS
+            MEET THE ARTIST & FOUNDER BEHIND THE INK
           </h2>
           <div className="h-px w-16 bg-white/20" />
         </motion.div>
 
         {/* CARDS */}
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="flex justify-center">
 
           {[
-            { name: "JAY", role: "BLACK & GREY", img: "/artist1.jpg" },
-            { name: "KAREN", role: "FINE LINE & MINIMALIST", img: "/artist2.jpg" },
-            { name: "MIKE", role: "REALISM | COVER-UPS", img: "/artist3.jpg" },
+            { name: "TATA", role: "SYLVESTRE", img: "/artist1.jpg" },
           ].map((artist, i) => (
             <motion.div
               key={i}
@@ -89,6 +87,13 @@ export default function ArtistsSection() {
                 >
                   BOOK THIS ARTIST
                 </button>
+
+                <a
+                  href="/artists"
+                  className="mt-3 inline-block border border-white/30 px-6 py-3 text-sm tracking-widest text-white hover:bg-white hover:text-black transition duration-300"
+                >
+                SEE PORTFOLIO
+              </a>
 
               </div>
             </motion.div>

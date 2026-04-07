@@ -4,25 +4,52 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function StyleSection() {
+  const styles = [
+    {
+      title: "BLACK & GREY",
+      images: [
+        "/styles/bg/bg1.jpg",
+        "/styles/bg/bg2.jpg",
+        "/styles/bg/bg3.jpg",
+      ],
+    },
+    {
+      title: "MINIMALIST",
+      images: [
+        "/styles/min/m1.jpg",
+        "/styles/min/m2.jpg",
+        "/styles/min/m3.jpg",
+      ],
+    },
+    {
+      title: "CUSTOM",
+      images: [
+        "/styles/custom/c1.jpg",
+        "/styles/custom/c2.jpg",
+        "/styles/custom/c3.jpg",
+      ],
+    },
+  ];
+
   return (
     <section className="relative z-20 -mt-40 px-6 py-24 overflow-hidden">
 
       {/* 🔥 BASE GRADIENT */}
-<div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black" />
 
-{/* 🎨 TEXTURE (VISIBLE + BLENDED) */}
-<div className="absolute inset-0 bg-[url('/texture.jpg')] opacity-20" />
+      {/* 🎨 TEXTURE */}
+      <div className="absolute inset-0 bg-[url('/texture.jpg')] opacity-20" />
 
-{/* ✨ SUBTLE GLOW */}
-<div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]" />
+      {/* ✨ SUBTLE GLOW */}
+      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]" />
 
-      {/* 🔥 TOP BLEND (smooth from hero) */}
+      {/* 🔝 TOP BLEND */}
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-black/80 to-transparent z-10" />
 
       {/* CONTENT */}
       <div className="relative z-20 max-w-7xl mx-auto">
 
-        {/* 🔥 ANIMATED TITLE */}
+        {/* TITLE */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,11 +62,7 @@ export default function StyleSection() {
 
         {/* CARDS */}
         <div className="grid md:grid-cols-3 gap-8">
-          {[
-            { title: "BLACK & GREY", img: "/tattoo1.jpg" },
-            { title: "MINIMALIST", img: "/tattoo2.jpg" },
-            { title: "REALISM", img: "/tattoo3.jpg" },
-          ].map((item, i) => (
+          {styles.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
@@ -50,7 +73,7 @@ export default function StyleSection() {
             >
               {/* IMAGE */}
               <img
-                src={item.img}
+                src={item.images[0]}
                 className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
               />
 
@@ -59,7 +82,7 @@ export default function StyleSection() {
 
               {/* CONTENT */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <h3 className="text-xl md:text-2xl font-semibold tracking-wide mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold tracking-wide mb-4 text-white">
                   {item.title}
                 </h3>
 

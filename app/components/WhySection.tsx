@@ -68,7 +68,7 @@ export default function WhySection() {
             },
             {
               icon: <Users size={44} strokeWidth={1} />,
-              title: "EXPERIENCED ARTISTS",
+              title: "EXPERIENCED ARTIST",
               desc: "Skilled professionals with years of expertise.",
             },
             {

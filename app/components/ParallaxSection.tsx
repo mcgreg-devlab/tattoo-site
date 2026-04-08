@@ -69,7 +69,7 @@ export function ParallaxSection() {
           viewport={{ once: true }}
           className="inline-block mt-6 border border-white px-8 py-3 text-sm tracking-widest hover:bg-white hover:text-black transition duration-300"
         >
-          MEET THE ARTISTS →
+          MEET THE ARTIST →
         </motion.a>
 
       </div>
